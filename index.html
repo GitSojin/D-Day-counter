@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>D-Day</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>D-Day</h1>
+    <div id="d-day-container">
+      <div class="d-day-child-container">
+        <span id="days">0</span>
+        <span>일</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="hours">0</span>
+        <span>시간</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="min">0</span>
+        <span>분</span>
+      </div>
+      <div class="d-day-child-container">
+        <span id="sec">0</span>
+        <span>초</span>
+      </div>
+    </div>
+
+    <div id="d-day-message"></div>
+    <div id="target-selector id">
+      <input id="target-year-input" class="target-input" size="5" /> -
+      <input id="target-month-input" class="target-input" size="5" /> -
+      <input id="target-date-input" class="target-input" size="5" />
+    </div>
+
+    <button class="btn" onclick="starter()">count start</button>
+    <button class="btn" onclick="resetTimer()">타이머 초기화</button>
+    <!-- <script src="./script.js"></script> -->
+    <!-- 아래로 쭉쭉 태그 생성한 뒤 스크립트 태그 만나서 오류 발생 X -->
+    <!-- script 파일 만나면 html 파일 해석 중단하고 JS 먼저 해석하고 끝나면 
+        다시 html 파일 해석하며, 그 과정에서 태그가 생성된다.
+        즉, 모든 태그 생성된 이후에 script 태그 만나게 하면 된다.
+    -->
+    <!-- script 태그는 head 태그에 있어도 되고, body 태그에 있어도 된다. -->
+    <!-- head 태그에 script 태그를 만들고 오류 발생 안하게 하고싶으면 다음과 같이 작성하기
+            <script src="./script.js" defer></script>
+            위와 같이 작성하면 script 만나도 멈추지 않고 동시에 진행되기 때문에 오류 발생 X
+     -->
+  </body>
+</html>
